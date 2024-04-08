@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KeyboardApp.MainPage">
+
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Controls">
+            <MenuFlyoutItem Text="New" Clicked="OnNewControl">
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Ctrl"
+                                         Key="A"/>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="Delete" Clicked="OnDeleteControl"
+                            IsEnabled="False" >
+                <MenuFlyoutItem.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Ctrl,Shift"
+                                         Key="X"/>
+                </MenuFlyoutItem.KeyboardAccelerators>
+            </MenuFlyoutItem>
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+    <ScrollView>
+        <VerticalStackLayout
+            x:Name="stackContainer"
+            Padding="30,0"
+            Spacing="25">
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
